@@ -12,6 +12,7 @@ provider "aws" {
 module "ec2_instances" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 2.0"
+  name           = "my-ec2-cluster"
   count          = var.ec2_instance_count
   ami            = var.ami
   instance_type  = var.instance_type
